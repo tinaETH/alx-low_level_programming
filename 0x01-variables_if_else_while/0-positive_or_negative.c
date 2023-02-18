@@ -4,8 +4,9 @@
 
 /* more headers goes there */
 /** randome numbers to the screen then tells the user if it s
-         * positive, nagative o r zero.
+         * positive, nagative o r zero.*/
 /* betty style doc for function main goes there */
+
 int main(void)
 {
 	int n;
