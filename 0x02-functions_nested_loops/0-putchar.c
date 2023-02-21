@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * main - program that prints putchar.
+ 
  * Write a program that prints _putchar, followed by a new line.
- * main - Entry point
- * Return : Always 0
+ * 
+ * Return : int
  */
 
 int main(void)
