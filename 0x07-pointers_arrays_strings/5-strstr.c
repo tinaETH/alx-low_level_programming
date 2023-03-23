@@ -1,21 +1,38 @@
 #include "main.h"
 /**
- * coincidence - define if the string b is inside a.
- * @a: source string
- * @b: string to be searched
+ * _strstr - Locates a substring.
+ * @haystack: The string to be searched.
+ * @needle: The substring to be located.
  *
- * Return: 1 if there is coincidence, otherwise 0.
+ * Return: If the substring is located - a pointer to the beginning
+ *                                       of the located substring.
+ *         If the substring is not located - NULL.
  */
-int coincidence(char *a, char *b)
+
+char *_strstr(char *haystack, char *needle)
 {
-	while (*b && *b == *a)
+	int index;
+
+	if (*needle == 0)
+		return (haystack);
+
+	while (*haystack)
 	{
-		b++;
-		a++;
+		index = 0;
+
+		if (haystack[index] == needle[index])
+		{
+			do {
+				if (needle[index + 1] == '\0')
+					return (haystack);
+
+				index++;
+
+			} while (haystack[index] == needle[index]);
+		}
+
+		haystack++;
 	}
 
-	if (*b == '\0')
-		return (1);
-	else
-		return (0);
+	return ('\0');
 }
